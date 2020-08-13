@@ -8,12 +8,11 @@ body {
     flex-wrap: nowrap;
     margin: 1em;
     border: 5px dashed red;
-    flex-basis: 75%;
 }
 
-.fishList {
+.fishlist {
+    display: flex;
     flex: 3;
-    display-flex: flex;
     flex-wrap: wrap;
     
 
@@ -22,12 +21,12 @@ body {
 .fishlist-card{
     background-color: chartreuse;
     margin: 1em;
-    
+    flex-basis: 25%;
+    padding: 0 1em;
 }
 
 .card-image {
     
-
 }
 
 .fish-image {
@@ -38,5 +37,12 @@ body {
 aside {
     flex: 1;
     background-color: cadetblue;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    height: 7em;
+    width: auto;
 }
 
