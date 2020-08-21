@@ -1,5 +1,5 @@
 console.log("This is working!")
-import { useFish } from './fish/FishDataProvider.js';
+import { useFish, makeMostHolyFish, makeSoldierFish, makeUnworthy } from './fish/FishDataProvider.js';
 
 import {FishList} from  './fish/FishList.js';
 

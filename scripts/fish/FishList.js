@@ -3,18 +3,27 @@
  */
 
 // TODO: Import `useFish` from the data provider module
-import { useFish } from './FishDataProvider.js';
+import { useFish, makeMostHolyFish, makeSoldierFish, makeUnworthy } from './FishDataProvider.js';
 import {Fish} from './Fish.js';
 
 
 export const FishList = () => {
 
     // Get a reference to the `<article class="content">` element
-    const contentElement = document.querySelector(".fishList")
-    const fishes = useFish()
+    const holyFish = makeMostHolyFish();
+    addFishToDom(holyFish);
 
+    const soldiers = makeSoldierFish();
+    addFishToDom(soldiers);
+
+    const unworthy = makeUnworthy();
+    addFishToDom(unworthy);
+}
+
+const addFishToDom = (whichFishArray) => {
+    const contentElement = document.querySelector(".fishList");
     let fishHTMLRepresentation = "";
-    for (const fish of fishes) {
+    for (const fish of whichFishArray) {
         fishHTMLRepresentation += Fish(fish);
     }
 
